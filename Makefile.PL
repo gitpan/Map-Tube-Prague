@@ -14,7 +14,7 @@ license 'artistic_2';
 name 'Map-Tube-Prague';
 readme_from 'Prague.pm';
 requires 'File::Share' => 0;
-requires 'Map::Tube' => '2.26';
+requires 'Map::Tube' => '2.27';
 requires 'Moo' => 0;
 requires 'namespace::clean' => 0;
 requires 'perl' => '5.8.0';
@@ -29,7 +29,7 @@ test_requires 'Test::NoWarnings' => 0;
 test_requires 'Test::Pod' => 0;
 test_requires 'Test::Pod::Coverage' => 0;
 tests_recursive;
-version '0.01';
+version '0.02';
 
 # Run.
 WriteAll();

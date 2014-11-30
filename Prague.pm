@@ -11,13 +11,14 @@ use Moo;
 use namespace::clean;
 
 # Version.
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
+# Get XML.
 has xml => (
 	'is' => 'ro',
 	'default' => sub {
 		return dist_file('Map-Tube-Prague', 'prague-map.xml');
-	}
+	},
 );
 
 with 'Map::Tube';
@@ -36,6 +37,8 @@ Map::Tube::Prague - Interface to the Prague Tube Map.
 
  use Map::Tube::Prague;
  my $obj = Map::Tube::Prague->new;
+ my $station = $obj->get_node_by_id($station_id);
+ my $station = $obj->get_node_by_name($station_name);
  my $route = $obj->get_shortest_route($from, $to);
  my $xml_file = $obj->xml;
 
@@ -53,6 +56,16 @@ For more information about Prague Map, click L<here|https://en.wikipedia.org/wik
 =item C<new()>
 
  Constructor.
+
+=item C<get_node_by_id($station_id)>
+
+ Get station node by id.
+ Returns Map::Tube::Node object.
+
+=item C<get_node_by_name($station_name)>
+
+ Get station node by name.
+ Returns Map::Tube::Node object.
 
 =item C<get_shortest_route($from, $to)>
 
@@ -86,7 +99,7 @@ For more information about Prague Map, click L<here|https://en.wikipedia.org/wik
  print "Route: ".encode_utf8($route)."\n";
 
  # Output:
- # Route: Dejvická, Hradčanská, Malostranská, Staroměstská, Náměstí Republiky, Vltavská, Nádraží Holešovice, Kobylisy, Ládví
+ # Route: Dejvická (Linka A), Hradčanská (Linka A), Malostranská (Linka A), Staroměstská (Linka A), Můstek (Linka A,Linka B), Muzeum (Linka A,Linka C), Hlavní nádraží (Linka C), Florenc (Linka C), Vltavská (Linka C), Nádraží Holešovice (Linka C), Kobylisy (Linka C), Ládví (Linka C)
 
 =head1 EXAMPLE2
 
@@ -143,6 +156,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-Version 0.01
+0.02
 
 =cut
