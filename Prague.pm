@@ -11,7 +11,7 @@ use Moo;
 use namespace::clean;
 
 # Version.
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Get XML.
 has xml => (
@@ -136,7 +136,10 @@ L<Map::Tube>,
 L<Map::Tube::Barcelona>,
 L<Map::Tube::Delhi>,
 L<Map::Tube::London>,
-L<Map::Tube::Tokyo>.
+L<Map::Tube::NYC>,
+L<Map::Tube::Sofia>,
+L<Map::Tube::Tokyo>,
+L<Map::Tube::Warsaw>.
 
 =head1 REPOSITORY
 
@@ -150,12 +153,12 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
- © Michal Špaček 2014
+ © 2014 Michal Špaček
  Artistic License
  BSD 2-Clause License
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
