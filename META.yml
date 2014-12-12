@@ -1,8 +1,9 @@
 ---
-abstract: 'Interface to the Prague Tube Map.'
+abstract: 'Interface to the Prague Metro Map.'
 author:
   - 'Michal Spacek <skim@cpan.org>'
 build_requires:
+  Encode: 0
   English: 0
   ExtUtils::MakeMaker: 6.36
   File::Object: 0.08
@@ -28,7 +29,7 @@ no_index:
     - t
 requires:
   File::Share: 0
-  Map::Tube: '2.27'
+  Map::Tube: '2.41'
   Moo: 0
   namespace::clean: 0
   perl: 5.8.0
@@ -37,4 +38,4 @@ resources:
   homepage: https://github.com/tupinek/Map-Tube-Prague
   license: http://opensource.org/licenses/artistic-license-2.0.php
   repository: git://github.com/tupinek/Map-Tube-Prague
-version: '0.03'
+version: '0.04'
