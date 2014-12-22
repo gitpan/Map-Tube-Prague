@@ -11,7 +11,7 @@ use Moo;
 use namespace::clean;
 
 # Version.
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 # Get XML.
 has xml => (
@@ -166,7 +166,7 @@ For more information about Prague Map, click L<here|https://en.wikipedia.org/wik
 
 =begin html
 
-<img src="images/Prague.png" alt="Pražské metro" width="300px" height="300px" />
+<img src="https://raw.githubusercontent.com/tupinek/Map-Tube-Prague/master/images/Prague.png" alt="Pražské metro" width="300px" height="300px" />
 
 =end html
 
@@ -222,6 +222,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.05
+0.06
 
 =cut
